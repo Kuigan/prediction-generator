@@ -30,7 +30,7 @@ module "get_predictions_lambda" {
   runtime             = "nodejs20.x"
   handler             = "prediction-functions/get.handler"
   lambda_role_arn     = module.prediction_function_execution_role.lambda_execution_role_arn
-  lambda_zip_path     = "${path.module}/get-predictions-lambda.zip"
+  lambda_zip_path     = "${path.module}/get-prediction-lambda.zip"
   dynamodb_table_name = module.prediction_table.dynamodb_table_name
   lambda_environment_vars    = {
   }
